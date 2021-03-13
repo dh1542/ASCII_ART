@@ -11,4 +11,13 @@ print("Width:  ", im.width)
 imSequence = im.getdata()
 imArray = np.array(imSequence)
 
-print (imArray)
+# New brightness matrix with averages of rgb values
+brightnessMatrix = []
+for e in imArray:
+	average = round(sum(e)/3)
+	brightnessMatrix.append(average)
+
+print(brightnessMatrix)
+
+
+
