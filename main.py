@@ -15,9 +15,22 @@ imArray = np.array(imSequence)
 brightnessMatrix = []
 for e in imArray:
 	average = round(sum(e)/3)
+	
 	brightnessMatrix.append(average)
 
-print(brightnessMatrix)
+
+chars = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
+
+# for each brightness value there is a char representing their brightness
+asciiIm = []
+for i in brightnessMatrix:
+	asciiIm.append(chars[round(i*0.25490)-1])
+	print(chars[round(i*0.25490)-1],  end='')
+
+	
+		
+
+
 
 
 
